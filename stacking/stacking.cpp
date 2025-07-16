@@ -141,6 +141,6 @@ int main()
 
     /* Stacking strategy 2 */
     specifyLayer(targetLayer, 3, GIVEN_PLACEMENT);
-    printf("Specity result\n");
+    printf("Specify result\n");
     display(targetLayer); // expected: layer 3 will be the given placement 
 }
