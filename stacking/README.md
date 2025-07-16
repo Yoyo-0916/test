@@ -75,36 +75,41 @@
     1. 隨機選擇每一層
     2. 指定其中一層，剩下的隨機選擇
 
-# TODO 1：設計 
+# TODO
+
+#### TODO 1
 
 + Agent
     + observation: 目前的堆疊狀況 (哪些 Layer 疊好了、哪些還沒、疊了哪種類型 ... ...)
     + action: 從水平、垂直、間格這三種之中，選擇一種，疊在已有的
 + Environment
-    + transition: 由於允許重複選擇相同的種類，因此
-    + reward: 
+    + transition: 由於允許重複選擇相同的種類，因此下個 state 就是
+    + reward: ???
 
-# TODO 2：
+#### TODO 2
 
 + 從「中間」開始往兩側擴展
 
-
 # Issue
 
-## Stacking Reward Design Issue
+#### Stacking Reward Design Issue
 
++ 問題：因為一定疊得完，所以不能用 success 或 fail 設計 reward
++ 問題：疊完後，如何決定哪種 Stacking 得高分或低分
 + 問題：如果讓 Agent 做 Stacking，什麼時候應該要「換方向」(縱/橫向上面疊一個橫/縱向)
     + 關係到 reward 的設計 (e.g. 「換」可以得「高分」)
 + 問題：如果 Stacking 的目標是讓 P & R 更容易，如何衡量一個 Stacking 的「品質」( P&R 的難度 )？
     + 關係到 P&R 的難度，影響最終的成功率
 
-## Stacking Exploration Issue
+#### Stacking Exploration Issue
 
 + 問題：如果總是讓「換方向」得高分，則總是會疊出水平、垂直交錯的 Stacking，缺乏 Stacking 的多樣性
     + end game random flip 策略：遊戲結束後，隨機抽出其中一層，從垂直變水平
     + end game random force 策略：遊戲結束後，隨機抽出其中一層，變成由人工指定的那一層
+    + epsilon random playing 策略：遊戲進行過程中，讓 Agent 有一定機率採取隨機動做
+        + 因為只有 6 action 後 stacking phase 就結束了，所以機率可能至少要有 1/6
 
 # Intuition
 
-+ 
++ 如果要使用 RL 的方法來做 stacking，那麼 agent 得分的期望值至少要比 random 堆疊的期望值以及相同堆疊的期望值高
 
