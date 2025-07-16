@@ -1,6 +1,8 @@
 # Stacking Motivation
 
-+ 讓 P & R 更容易
++ 本程式旨在實現簡易 Stacking 實作 (不含 Agent)，目的是用來明確 Stacking 的規則。
++ Stacking 的 Placement Phase 的前置作業，目的是讓 Placement 跟 Routing 能夠更容易。
++ 程式的範例輸出放在 output_example.txt 檔案之中。
 
 # Mask
 
