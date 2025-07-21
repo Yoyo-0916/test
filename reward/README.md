@@ -8,7 +8,7 @@
 #### 目前實現的 Reward
 
 + Random Reward
-+ HPWL Reward
++ HPWL Reward (用來測試可擴充性)
 
 #### 未來可做的 Reward
 
