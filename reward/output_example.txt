@@ -1,0 +1,12 @@
+Undefined Reward (Abstract Class Default Implementation)
+2147483647
+Random Reward 1
+3
+Random Reward 2
+6
+HPWL Net Reward (HPWL Interface 1)
+-8
+HPWL Net Reward (HPWL Infertace 2)
+-11
+HPWL Netlist Reward (HPWL Interface 3)
+-16
